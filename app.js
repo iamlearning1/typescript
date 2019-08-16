@@ -1,4 +1,3 @@
-"use strict";
 var myString = "deepak";
 // myString = 12;
 var myNumber = 12;
@@ -25,3 +24,15 @@ var Color;
 })(Color || (Color = {}));
 var myColor = Color.Green;
 console.log(myColor);
+// functions
+function greeting(name) {
+    return "Hi " + name;
+}
+console.log(greeting("Deepak"));
+// console.log(greeting(45));
+// void
+function hello() {
+    console.log("hello");
+    //   return "hello";
+}
+hello();

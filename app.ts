@@ -31,3 +31,19 @@ enum Color {
 
 const myColor: Color = Color.Green;
 console.log(myColor);
+
+// functions
+function greeting(name: string): string {
+  return "Hi " + name;
+}
+
+console.log(greeting("Deepak"));
+// console.log(greeting(45));
+
+// void
+function hello(): void {
+  console.log("hello");
+  //   return "hello";
+}
+
+hello();
