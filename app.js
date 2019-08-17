@@ -64,3 +64,14 @@ var complex2 = {
         return this.data;
     }
 };
+// Union types
+var newAge = 24;
+newAge = "24";
+// newAge = true;
+// never types
+function never() {
+    throw new Error("abc");
+}
+// null types
+var canBeNull = 12;
+canBeNull = null;

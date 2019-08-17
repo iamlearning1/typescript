@@ -85,3 +85,17 @@ const complex2: Complex = {
     return this.data;
   }
 };
+
+// Union types
+let newAge: string | number = 24;
+newAge = "24";
+// newAge = true;
+
+// never types
+function never(): never {
+  throw new Error("abc");
+}
+
+// null types
+let canBeNull: number | null = 12;
+canBeNull = null;
