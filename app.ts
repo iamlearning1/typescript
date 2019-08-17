@@ -1,3 +1,7 @@
+const chalk = require("chalk");
+const log = console.log;
+const red = chalk.red;
+
 let myString: string = "deepak";
 // myString = 12;
 
@@ -30,14 +34,14 @@ enum Color {
 }
 
 const myColor: Color = Color.Green;
-console.log(myColor);
+// log(chalk.red(myColor));
 
 // functions
 function greeting(name: string): string {
   return "Hi " + name;
 }
 
-console.log(greeting("Deepak"));
+// console.log(greeting("Deepak"));
 // console.log(greeting(45));
 
 // void
@@ -46,4 +50,15 @@ function hello(): void {
   //   return "hello";
 }
 
-hello();
+// hello();
+
+// function types
+
+function multiply(x: number, y: number): number {
+  return x * y;
+}
+
+let myMultiply: (a: number, b: number) => number;
+// myMultiply = hello
+myMultiply = multiply;
+log(red(myMultiply(12, 14)));

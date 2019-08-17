@@ -1,3 +1,6 @@
+var chalk = require("chalk");
+var log = console.log;
+var red = chalk.red;
 var myString = "deepak";
 // myString = 12;
 var myNumber = 12;
@@ -23,16 +26,24 @@ var Color;
     Color[Color["Red"] = 102] = "Red";
 })(Color || (Color = {}));
 var myColor = Color.Green;
-console.log(myColor);
+// log(chalk.red(myColor));
 // functions
 function greeting(name) {
     return "Hi " + name;
 }
-console.log(greeting("Deepak"));
+// console.log(greeting("Deepak"));
 // console.log(greeting(45));
 // void
 function hello() {
     console.log("hello");
     //   return "hello";
 }
-hello();
+// hello();
+// function types
+function multiply(x, y) {
+    return x * y;
+}
+var myMultiply;
+// myMultiply = hello
+myMultiply = multiply;
+log(red(myMultiply(12, 14)));
