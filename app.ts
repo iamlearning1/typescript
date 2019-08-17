@@ -61,4 +61,19 @@ function multiply(x: number, y: number): number {
 let myMultiply: (a: number, b: number) => number;
 // myMultiply = hello
 myMultiply = multiply;
-log(red(myMultiply(12, 14)));
+// log(red(myMultiply(12, 14)));
+
+// Objects
+let userData: { name: string; age: number } = {
+  name: "Deepak",
+  age: 24
+};
+// userData = {};
+
+// Complex Objects
+const complex: { data: number[]; output: (all: boolean) => number[] } = {
+  data: [1, 2, 3],
+  output: function(all: boolean): number[] {
+    return this.data;
+  }
+};

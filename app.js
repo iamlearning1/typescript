@@ -46,4 +46,17 @@ function multiply(x, y) {
 var myMultiply;
 // myMultiply = hello
 myMultiply = multiply;
-log(red(myMultiply(12, 14)));
+// log(red(myMultiply(12, 14)));
+// Objects
+var userData = {
+    name: "Deepak",
+    age: 24
+};
+// userData = {};
+// Complex Objects
+var complex = {
+    data: [1, 2, 3],
+    output: function (all) {
+        return this.data;
+    }
+};
