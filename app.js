@@ -52,9 +52,13 @@ var userData = {
     name: "Deepak",
     age: 24
 };
-// userData = {};
-// Complex Objects
 var complex = {
+    data: [1, 2, 3],
+    output: function (all) {
+        return this.data;
+    }
+};
+var complex2 = {
     data: [1, 2, 3],
     output: function (all) {
         return this.data;

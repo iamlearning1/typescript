@@ -71,7 +71,15 @@ let userData: { name: string; age: number } = {
 // userData = {};
 
 // Complex Objects
-const complex: { data: number[]; output: (all: boolean) => number[] } = {
+type Complex = { data: number[]; output: (all: boolean) => number[] };
+const complex: Complex = {
+  data: [1, 2, 3],
+  output: function(all: boolean): number[] {
+    return this.data;
+  }
+};
+
+const complex2: Complex = {
   data: [1, 2, 3],
   output: function(all: boolean): number[] {
     return this.data;
