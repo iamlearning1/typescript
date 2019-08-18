@@ -6,9 +6,9 @@ function echo(data: any) {
 // console.log(echo(24));
 // console.log(echo({ name: "Deepak", age: 27 }));
 
-function betterEcho<Type>(data: Type) {
-  return data;
-}
+// function betterEcho<Type>(data: Type) {
+//   return data;
+// }
 
 interface Person {
   name: string;
@@ -23,19 +23,19 @@ interface Person {
 const testResults: Array<number> = [2, 3];
 
 // Arrays
-function print<Type>(arr: Type[]) {
-  arr.forEach(item => console.log(item));
-}
+// function print<Type>(arr: Type[]) {
+//   arr.forEach(item => console.log(item));
+// }
 
 // print<string>(["Apple", "Mango"]);
 // print<number>(testResults);
 
 // generic class
-class Simple<Type extends string | number> {
-  base: Type;
-  multiplier: Type;
+class Simple<T extends number | string, U extends number | string> {
+  base: T;
+  multiplier: U;
 
-  constructor(base: Type, multiplier: Type) {
+  constructor(base: T, multiplier: U) {
     this.base = base;
     this.multiplier = multiplier;
   }
@@ -44,3 +44,6 @@ class Simple<Type extends string | number> {
     return +this.base * +this.multiplier;
   }
 }
+
+const simple = new Simple<string, number>("12", 10);
+console.log(simple.calculate());
