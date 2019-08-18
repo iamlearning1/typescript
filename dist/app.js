@@ -19,3 +19,14 @@ function print(arr) {
 }
 // print<string>(["Apple", "Mango"]);
 // print<number>(testResults);
+// generic class
+var Simple = /** @class */ (function () {
+    function Simple(base, multiplier) {
+        this.base = base;
+        this.multiplier = multiplier;
+    }
+    Simple.prototype.calculate = function () {
+        return this.base * this.multiplier;
+    };
+    return Simple;
+}());

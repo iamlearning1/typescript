@@ -29,3 +29,18 @@ function print<Type>(arr: Type[]) {
 
 // print<string>(["Apple", "Mango"]);
 // print<number>(testResults);
+
+// generic class
+class Simple<Type extends string | number> {
+  base: Type;
+  multiplier: Type;
+
+  constructor(base: Type, multiplier: Type) {
+    this.base = base;
+    this.multiplier = multiplier;
+  }
+
+  calculate(): number {
+    return +this.base * +this.multiplier;
+  }
+}
