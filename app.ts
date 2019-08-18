@@ -3,6 +3,8 @@ function log(value: any): void {
   console.log(chalk.red(JSON.stringify(value)));
 }
 
+const sum = require("./math");
+log(sum(1, 2));
 class Person {
   constructor(
     public name: string,

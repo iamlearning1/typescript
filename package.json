@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "dev": "nodemon app.js",
+    "dev": "nodemon dist/app.js",
     "compile": "tsc --watch",
     "start": "concurrently -k \"yarn run compile\" \"yarn dev\""
   },

@@ -16,6 +16,8 @@ var chalk = require("chalk");
 function log(value) {
     console.log(chalk.red(JSON.stringify(value)));
 }
+var sum = require("./math");
+log(sum(1, 2));
 var Person = /** @class */ (function () {
     function Person(name, age, type) {
         if (age === void 0) { age = 24; }
