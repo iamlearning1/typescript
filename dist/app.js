@@ -1,23 +1,13 @@
 "use strict";
-function greet(person) {
-    console.log("Hi", person.name);
+function echo(data) {
+    return data;
 }
-// greet({
-//   name: "Deepak",
-//   age: 24,
-//   hobbies: ["reading"]
-// });
-var Human = /** @class */ (function () {
-    function Human(name) {
-        this.name = name;
-    }
-    Human.prototype.greet = function () {
-        console.log("Hi", this.name);
-    };
-    return Human;
-}());
-var me = new Human("Deepak");
-var senior = {
-    name: "Deepak",
-    age: 24
-};
+// console.log(echo("Deepak"));
+// console.log(echo(24));
+// console.log(echo({ name: "Deepak", age: 27 }));
+function betterEcho(data) {
+    return data;
+}
+console.log(betterEcho("Deepak").length);
+console.log(betterEcho(24));
+console.log(betterEcho({ name: "Deepak", age: 27 }));
