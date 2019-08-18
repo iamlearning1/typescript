@@ -1,3 +1,4 @@
+"use strict";
 var chalk = require("chalk");
 var log = console.log;
 var red = chalk.red;
