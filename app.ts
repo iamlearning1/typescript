@@ -20,5 +20,42 @@ class Person {
 }
 
 let person = new Person("Deepak", undefined, "admin");
-log(person);
-person.getAge();
+// log(person);
+// person.getAge();
+
+// static
+class Helper {
+  static PI: number = 3.14;
+}
+// log(Helper.PI);
+
+// Inheritance
+class Pi extends Helper {
+  constructor() {
+    super();
+  }
+}
+
+// log(Pi.PI);
+
+// Abstract
+abstract class Project {
+  abstract changeName(name: string): void;
+}
+
+// const project = new Project()
+
+// private constructors
+class OnlyOne {
+  private static instance: OnlyOne;
+
+  private constructor(public name: string) {}
+
+  static getInstance() {
+    OnlyOne.instance = new OnlyOne("The Only One");
+    return OnlyOne.instance;
+  }
+}
+
+// const onlyOne = new OnlyOne()
+log(OnlyOne.getInstance());
