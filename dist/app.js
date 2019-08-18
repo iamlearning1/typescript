@@ -8,6 +8,14 @@ function echo(data) {
 function betterEcho(data) {
     return data;
 }
-console.log(betterEcho("Deepak").length);
-console.log(betterEcho(24));
-console.log(betterEcho({ name: "Deepak", age: 27 }));
+// console.log(betterEcho<string>("Deepak").length);
+// console.log(betterEcho<number>(24));
+// console.log(betterEcho<Person>({ name: "Deepak", age: 27 }));
+// Built-in generics
+var testResults = [2, 3];
+// Arrays
+function print(arr) {
+    arr.forEach(function (item) { return console.log(item); });
+}
+// print<string>(["Apple", "Mango"]);
+// print<number>(testResults);
