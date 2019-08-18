@@ -70,4 +70,5 @@ var OnlyOne = /** @class */ (function () {
     return OnlyOne;
 }());
 // const onlyOne = new OnlyOne()
-log(OnlyOne.getInstance());
+// log(OnlyOne.getInstance());
+// OnlyOne.name = "Deepak";

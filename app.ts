@@ -49,7 +49,7 @@ abstract class Project {
 class OnlyOne {
   private static instance: OnlyOne;
 
-  private constructor(public name: string) {}
+  private constructor(public readonly name: string) {}
 
   static getInstance() {
     OnlyOne.instance = new OnlyOne("The Only One");
@@ -58,4 +58,5 @@ class OnlyOne {
 }
 
 // const onlyOne = new OnlyOne()
-log(OnlyOne.getInstance());
+// log(OnlyOne.getInstance());
+// OnlyOne.name = "Deepak";
