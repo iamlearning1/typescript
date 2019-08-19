@@ -6,14 +6,45 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 function personDecorator(constructor) {
-    console.log("Person Class", constructor);
+    console.log(constructor);
 }
+// @personDecorator
 var Person = /** @class */ (function () {
     function Person() {
         console.log("Person");
     }
-    Person = __decorate([
-        personDecorator
-    ], Person);
     return Person;
 }());
+// Factory
+function logging(value) {
+    if (value) {
+        console.log(personDecorator);
+    }
+    else {
+        console.log(null);
+    }
+}
+// @logging(false)
+var Car = /** @class */ (function () {
+    function Car() {
+    }
+    return Car;
+}());
+function printable(Fn) {
+    Fn.prototype.print = function () {
+        console.log(this);
+    };
+}
+var Plant = /** @class */ (function () {
+    function Plant() {
+        this.name = "Eucalyptus";
+    }
+    Plant = __decorate([
+        logging(false),
+        printable
+    ], Plant);
+    return Plant;
+}());
+var plant = new Plant();
+plant.print();
+// console.log(plant);
