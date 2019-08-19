@@ -35,16 +35,39 @@ function printable(Fn) {
         console.log(this);
     };
 }
+// @logging(false)
 var Plant = /** @class */ (function () {
     function Plant() {
         this.name = "Eucalyptus";
     }
     Plant = __decorate([
-        logging(false),
         printable
     ], Plant);
     return Plant;
 }());
 var plant = new Plant();
-plant.print();
+// (<any>plant).print();
 // console.log(plant);
+// Method Decorator
+function editable(value) {
+    return function (target, propName, descriptor) {
+        descriptor.writable = value;
+    };
+}
+var Greeting = /** @class */ (function () {
+    function Greeting() {
+    }
+    Greeting.prototype.hello = function () {
+        console.log("hello");
+    };
+    __decorate([
+        editable(false)
+    ], Greeting.prototype, "hello", null);
+    return Greeting;
+}());
+var greet = new Greeting();
+greet.hello();
+// greet.hello = function() {
+//   console.log("hi");
+// };
+// greet.hello();

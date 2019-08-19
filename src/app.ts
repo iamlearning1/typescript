@@ -29,12 +29,37 @@ function printable(Fn: Function) {
   };
 }
 
-@logging(false)
+// @logging(false)
 @printable
 class Plant {
   name: string = "Eucalyptus";
 }
 
 const plant = new Plant();
-(<any>plant).print();
+// (<any>plant).print();
 // console.log(plant);
+
+// Method Decorator
+function editable(value: boolean) {
+  return function(
+    target: any,
+    propName: string,
+    descriptor: PropertyDescriptor
+  ) {
+    descriptor.writable = value;
+  };
+}
+
+class Greeting {
+  @editable(false)
+  hello() {
+    console.log("hello");
+  }
+}
+
+const greet = new Greeting();
+greet.hello();
+// greet.hello = function() {
+//   console.log("hi");
+// };
+// greet.hello();
